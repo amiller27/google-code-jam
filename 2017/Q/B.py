@@ -25,7 +25,7 @@ def solve():
             return str(N[0]-1) + '9'*(len(N)-1)
 
     # N[first_less-1] can't be 0, because that would mean everything before it was 0
-    return ''.join(map(str, N[:i+1])) + str(N[first_less-1] - 1)*(first_less - i - 1) + '9'*(len(N) - first_less)
+    return ''.join(map(str, N[:i+1])) + str(N[first_less-1] - 1) + '9'*(len(N) - i - 2)
 
 T = int(raw_input())
 for case in xrange(T):
