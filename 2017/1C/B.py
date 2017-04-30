@@ -55,7 +55,7 @@ def solve():
             free_time += ints_taken_by_j.pop()
         elif not ints_taken_by_j:
             free_time += ints_taken_by_c.pop()
-        elif ints_taken_by_c[-1] > ints_taken_by_j[-1]:
+        elif 720 - j_time - sum(ints_taken_by_j) > free_time:
             free_time += ints_taken_by_c.pop()
         else:
             free_time += ints_taken_by_j.pop()
